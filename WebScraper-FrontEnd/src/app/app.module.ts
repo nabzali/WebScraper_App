@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SearchComponent } from './search/search.component';
-import { HistoryComponent } from './history/history.component';
+import { SearchComponent } from './components/search/search.component';
+import { HistoryComponent } from './components/history/history.component';
 
 @NgModule({
   declarations: [

@@ -7,9 +7,10 @@ import { Component } from '@angular/core';
 })
 export class SearchComponent {
 
+  // Initialising the inputs
   url: string = "";
   searchTerms: string = "";
-  searchEngine: string = "Google";
+  searchEngine: string = "Google"; // Default value on the dropdown
   
   constructor(){
     this.getValues();

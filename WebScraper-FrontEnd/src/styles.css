@@ -4,8 +4,8 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh; /* 100% of the viewport height */
+    padding: 2vh;
 }
-
 
 .container {
     margin-top: 10vh; /* 10% of the viewport height */
@@ -32,3 +32,21 @@ label {
     font-size: 3.5rem; 
     margin-bottom: 4rem; /* Add space below the heading */
 }
+
+/* Assuming your ul class is "nav nav-tabs" */
+ul.nav.nav-tabs {
+    width: 100%; /* Set the width to 100% to make it span the entire page */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Style the individual list items (li) and links (a) */
+ul.nav.nav-tabs li.nav-item {
+    display: inline-block; /* Display list items horizontally */
+    margin-right: 15px; /* Add some spacing between list items */
+}
+
+  
+  
+  
+  
