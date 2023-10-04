@@ -25,7 +25,7 @@ export class SearchComponent {
   }
 
   onClickRun() {
-    this.text = "Processing search and fetching result. Please wait..."
+    this.text = "Processing search. Please wait..."
   }
 
 }
