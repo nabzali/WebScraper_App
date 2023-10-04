@@ -1,0 +1,34 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+body {
+    background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+    display: flex;
+    justify-content: center;
+    height: 100vh; /* 100% of the viewport height */
+}
+
+
+.container {
+    margin-top: 10vh; /* 10% of the viewport height */
+}
+
+/* Scale up the text and input fields by 1.5x */
+.mb-3 {
+    transform: scale(1.5);
+}
+
+/* Add some margin to the scaled elements */
+.mb-3 {
+    margin-bottom: 1.5rem; /* Adjust as needed */
+    padding: 20px;
+}
+
+/* Make the labels bold */
+label {
+    font-weight: bold;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem; 
+    margin-bottom: 4rem; /* Add space below the heading */
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Search Results URL Counter</h2>
+        <div class="mb-3">
+            <label for="basic-url" class="form-label">URL:</label>
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon3">https://</span>
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" [(ngModel)]="url">
+            </div>
+            <div class="form-text" id="basic-addon4">e.g. https://www.infotrack.co.uk</div>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Search Terms:</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Search Terms" [(ngModel)]="searchTerms">
+            <div class="form-text" id="basic-addon4">e.g. land registry search</div>
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Search Engine:</label>
+            <select class="form-select" aria-label="Default select example" [(ngModel)]="searchEngine">
+                <option value="Google">Google</option>
+                <option value="Yahoo">Yahoo</option>
+                <option value="Bing">Bing</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-success" (click)="getValues()">Run</button>
+        </div>
+        <div class="mb-3">
+            <label for="historyButton" class="form-label col-sm-3">Or you can:</label>
+            <div class="col-sm-9">
+                <button id="historyButton" type="button" class="btn btn-primary">View Search History</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
