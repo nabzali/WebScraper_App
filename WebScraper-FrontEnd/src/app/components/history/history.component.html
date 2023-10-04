@@ -1,1 +1,31 @@
-<p>history works!</p>
+<div class="container">    
+    <h2 class="heading">Your Search Results</h2>
+    <div class="mb-3">
+        <span class="badge text-bg-primary" id="refresh">Refresh</span> <!-- add (click) to refresh values-->
+    </div>
+    <div class="mb-3">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Search Input</th>
+                <th scope="col">URL</th>
+                <th scope="col">Occurrences</th>
+                <th scope="col">Search Engine</th>
+                <th scope="col">Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let result of searchResults">
+                <th scope="row">{{result.id}}</th>
+                <td>{{result.searchTerms}}</td>
+                <td>{{result.url}}</td>
+                <td>{{result.occurrences}}</td>
+                <td>{{result.searchEngine}}</td>
+                <td>{{result.timestamp}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    
+</div>

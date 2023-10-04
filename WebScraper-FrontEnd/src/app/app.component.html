@@ -1,9 +1,11 @@
 <ul class="nav nav-tabs justify-content-center">
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">New Search</a>
+    <li class="nav-item" id="searchTab">
+        <a [class]="getSearchTabClass()" aria-current="page" (click)="onClickSearch()">New Search</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">Search History</a>
+    <li class="nav-item" id="historyTab">
+        <a [class]="getHistoryTabClass()" (click)="onClickHistory()">Search History</a>
     </li>
 </ul>
-<app-search></app-search>
+<app-search *ngIf="searchSelected"></app-search>
+<app-history *ngIf="!searchSelected"></app-history>
+

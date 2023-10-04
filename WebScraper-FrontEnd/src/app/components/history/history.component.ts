@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { searchResponse } from 'src/app/models/searchResponse';
 
 @Component({
   selector: 'app-history',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./history.component.css']
 })
 export class HistoryComponent {
-
+  searchResults: searchResponse[] = [
+    {
+      id: 1, url: "helloworld.com", 
+      searchEngine: "Google", 
+      searchTerms: "Apple", 
+      occurrences: "1, 38, 67", 
+      timestamp: "timestamp"
+    },
+    {
+      id: 2, url: "example.co.uk", 
+      searchEngine: "Bing", 
+      searchTerms: "Banana", 
+      occurrences: "4, 92", 
+      timestamp: "timestamp2"
+    }
+  ]
 }

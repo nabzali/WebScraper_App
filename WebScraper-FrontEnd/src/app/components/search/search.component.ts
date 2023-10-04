@@ -11,6 +11,8 @@ export class SearchComponent {
   url: string = "";
   searchTerms: string = "";
   searchEngine: string = "Google"; // Default value on the dropdown
+
+  text: string = ""
   
   constructor(){
     this.getValues();
@@ -20,6 +22,10 @@ export class SearchComponent {
     console.log(this.url);
     console.log(this.searchTerms);
     console.log(this.searchEngine);
+  }
+
+  onClickRun() {
+    this.text = "Processing search and fetching result. Please wait..."
   }
 
 }

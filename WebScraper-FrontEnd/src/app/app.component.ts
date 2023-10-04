@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'WebScraper-FrontEnd';
+  title = 'URL Searcher WebScraper';
+  searchSelected: boolean = true;
+
+  onClickHistory() {
+    this.searchSelected = false;
+    console.log(this.searchSelected)
+  }
+
+  onClickSearch() {
+    this.searchSelected = true;
+    console.log(this.searchSelected)
+  }
+
+  getSearchTabClass() {
+    return this.searchSelected ? "nav-link active" : "nav-link";
+  }
+
+  getHistoryTabClass() {
+    return this.searchSelected ? "nav-link" : "nav-link active";
+  }
+
 }

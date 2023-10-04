@@ -7,6 +7,11 @@ body {
     padding: 2vh;
 }
 
+.refreshDiv {
+    padding: 0px;
+    margin: 0px;
+}
+
 .container {
     margin-top: 10vh; /* 10% of the viewport height */
 }
@@ -14,10 +19,6 @@ body {
 /* Scale up the text and input fields by 1.5x */
 .mb-3 {
     transform: scale(1.5);
-}
-
-/* Add some margin to the scaled elements */
-.mb-3 {
     margin-bottom: 1.5rem; /* Adjust as needed */
     padding: 20px;
 }
@@ -33,8 +34,8 @@ label {
     margin-bottom: 4rem; /* Add space below the heading */
 }
 
-/* Assuming your ul class is "nav nav-tabs" */
-ul.nav.nav-tabs {
+
+ul.nav.nav-tabs {       
     width: 100%; /* Set the width to 100% to make it span the entire page */
     padding: 0; /* Remove any default padding */
     margin: 0; /* Remove any default margin */
@@ -46,7 +47,14 @@ ul.nav.nav-tabs li.nav-item {
     margin-right: 15px; /* Add some spacing between list items */
 }
 
-  
+#refresh {
+    margin-bottom: 2%;
+}
+
+ul.nav.nav-tabs li.nav-item:hover, #refresh {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #ccc; /* Change background color on hover */
+}
   
   
   
