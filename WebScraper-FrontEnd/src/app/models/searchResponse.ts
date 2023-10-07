@@ -1,7 +1,7 @@
-import { searchRequest } from "./searchRequest";
-
-export interface searchResponse extends searchRequest {
+export interface searchResponse {
+    id: number;
+    url: string;
+    searchTerms: string;
     occurrences: string;
     timestamp: string;
-    id: number;
-}
+}    

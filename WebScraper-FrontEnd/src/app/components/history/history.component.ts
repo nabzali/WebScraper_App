@@ -9,15 +9,13 @@ import { searchResponse } from 'src/app/models/searchResponse';
 export class HistoryComponent {
   searchResults: searchResponse[] = [
     {
-      id: 1, url: "helloworld.com", 
-      searchEngine: "Google", 
+      id: 1, url: "helloworld.com",
       searchTerms: "Apple", 
       occurrences: "1, 38, 67", 
       timestamp: "timestamp"
     },
     {
-      id: 2, url: "example.co.uk", 
-      searchEngine: "Bing", 
+      id: 2, url: "example.co.uk",
       searchTerms: "Banana", 
       occurrences: "4, 92", 
       timestamp: "timestamp2"
