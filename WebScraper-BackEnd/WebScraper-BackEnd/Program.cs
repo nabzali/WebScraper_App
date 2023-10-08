@@ -15,11 +15,24 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"))
 );
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAngularApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:4200")
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
+
 builder.Services.AddScoped<IApplicationService, ApplicationService>();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
+
+app.UseCors("AllowAngularApp");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

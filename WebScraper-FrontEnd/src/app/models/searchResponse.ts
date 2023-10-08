@@ -3,5 +3,5 @@ export interface searchResponse {
     url: string;
     searchTerms: string;
     occurrences: string;
-    timestamp: string;
+    timestamp: Date;
 }    

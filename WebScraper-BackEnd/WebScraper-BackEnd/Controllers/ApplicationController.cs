@@ -6,10 +6,10 @@ namespace WebScraper_BackEnd.Controllers
 {
     [Route("api/")]
     [ApiController]
-    public class SearchController : ControllerBase
+    public class ApplicationController : ControllerBase
     {
         private readonly IApplicationService _applicationService;
-        public SearchController(IApplicationService applicationService)
+        public ApplicationController(IApplicationService applicationService)
         {
             _applicationService = applicationService;
         }
@@ -33,7 +33,7 @@ namespace WebScraper_BackEnd.Controllers
             }
             catch (Exception e)
             {
-                return StatusCode(500, e);
+                return StatusCode(500, $"An error occurred when performing the requested search. Details: {e}");
             }
                         
             return Ok(searchResult);

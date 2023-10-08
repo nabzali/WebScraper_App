@@ -4,16 +4,18 @@ import { searchRequest } from '../models/searchRequest';
 import { searchResponse } from '../models/searchResponse';
 import { Observable, catchError } from 'rxjs';
 
-@Injectable()
-export class applicationService {
+@Injectable({
+    providedIn: 'root',
+})
+export class ApplicationService {
 
-    baseUrl = "http://localhost:44380/";
+    private baseUrl = "https://localhost:44380/";
 
     constructor(private http: HttpClient) {
     }
 
-    createSearchRequest(searchRequest: searchRequest) {
-        this.http.post<searchResponse>(this.baseUrl + "api/search", searchRequest)
+    createSearchRequest(searchRequest: searchRequest) : Observable<searchResponse>{
+        return this.http.post<searchResponse>(this.baseUrl + "api/search", searchRequest)
             .pipe(
                 catchError((error: any) => {
                     // Handling error
@@ -24,7 +26,7 @@ export class applicationService {
     }
 
     getSearchHistory(): Observable<searchResponse[]>{
-       return this.http.get<searchResponse[]>(this.baseUrl + "api/history"); 
+       return this.http.get<searchResponse[]>("https://localhost:44380/api/history"); 
     }
 
 }

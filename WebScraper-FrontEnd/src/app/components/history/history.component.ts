@@ -1,24 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { searchResponse } from 'src/app/models/searchResponse';
+import { ApplicationService } from 'src/app/services/applicationService';
 
 @Component({
   selector: 'app-history',
   templateUrl: './history.component.html',
   styleUrls: ['./history.component.css']
 })
-export class HistoryComponent {
-  searchResults: searchResponse[] = [
-    {
-      id: 1, url: "helloworld.com",
-      searchTerms: "Apple", 
-      occurrences: "1, 38, 67", 
-      timestamp: "timestamp"
-    },
-    {
-      id: 2, url: "example.co.uk",
-      searchTerms: "Banana", 
-      occurrences: "4, 92", 
-      timestamp: "timestamp2"
-    }
-  ]
+export class HistoryComponent implements OnInit{
+
+  constructor(private applicationService: ApplicationService){}
+
+  searchResults : searchResponse[] = []
+  ngOnInit(): void {
+    this.applicationService.getSearchHistory().subscribe((response) => {
+      this.searchResults = response;
+      console.log(this.searchResults);
+    });
+    
+  }
 }
