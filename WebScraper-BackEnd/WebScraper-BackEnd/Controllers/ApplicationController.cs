@@ -53,6 +53,10 @@ namespace WebScraper_BackEnd.Controllers
             {
                 return StatusCode(500, $"An error occurred when trying to requesst search history data. Details: {e}");
             }
+            if (searchHistory == null)
+            {
+                return NotFound();
+            }
 
             return Ok(searchHistory);
         }
