@@ -4,9 +4,7 @@
 
 The spec for the project can be found [here](link).
 
-I created an Angular app to go along with the ASP.NET Web API.
-
-The Angular front-end contains two views (components).
+I created an Angular app to go along with the ASP.NET Web API. The Angular front-end contains two views (components).
 
 1. **Search View**: Allows users to perform searches and retrieve search results.
 2. **History View**: Allows users to view search history data.
