@@ -17,20 +17,17 @@ There are two views (components) in the UI that can be navigated to using the ta
 
 ## API Endpoints
 
-The ASP.NET Web API provides two endpoints for interacting with the application:
+I implemented 2 endpoints in the controller:
 
 Base URL for the API: `https://localhost:44380/`
 
-## User Schema Endpoints
-### `/api/users` 
-
-**Get all users**
+**Get search history**
 ```http
-GET /api/users
+GET /api/history
 ```
-**Get user by ID**
+**Perform search**
 ```http
-GET /api/users/{id}
+POST /api/search
 ```
 
 [Add any additional information about your API endpoints here.]
