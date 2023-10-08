@@ -1,4 +1,4 @@
-# Search Results WebScraper Project
+# Search Results WebScraper Project for InfoTrack
 
 ## Intro
 
