@@ -9,7 +9,7 @@ import { Observable, catchError } from 'rxjs';
 })
 export class ApplicationService {
 
-    private baseUrl = "https://localhost:44380/";
+    private baseUrl = "https://localhost:7033/";
 
     constructor(private http: HttpClient) {}
 
