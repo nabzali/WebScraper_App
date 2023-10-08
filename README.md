@@ -22,7 +22,6 @@ For this project I chose to create an Angular app to go along with the ASP.NET W
 
 **Front End (Angular)**
 
-URL: `http://localhost:4200/`
 The Angular front-end consists of two views nested inside the root component. Navigate between them using the two tabs at the top of the UI.
 1. **Search View**: Allows users to perform searches and retrieve search results.
 2. **History View**: Allows users to view search history data.
@@ -35,7 +34,6 @@ Two models were also created to represent data.
 
 **Back-End (ASP.NET Web API)**
 
-Base URL: `https://localhost:7033/`
 A controller method to deal with API requests features methods for two endpoints, corresponding to the request from the Search component (POST request) and the history component (GET request).
 
 **Get search history to populate history data table**
