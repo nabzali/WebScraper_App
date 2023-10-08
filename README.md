@@ -41,7 +41,7 @@ A controller method to deal with API requests features methods for two endpoints
 ```http
 GET /api/history
 ```
-**Perform search to get search result and store the data**
+**Perform search to get search result and store the data (sent with searchRequestModel body)**
 ```http
 POST /api/search
 ```
