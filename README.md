@@ -9,10 +9,11 @@ To view these, kindly see [WebScraper_App
 /Screenshots](https://github.com/nabzali/WebScraper_App/tree/main/Screenshots).
 
 ## Instructions
-In the directory for the front-end, run `npm install` followed by `ng serve`.
-In the directory for the back-end, run `dotnet run`.
-- The connection string is stored in the appsettings.json file
-- And if needed, click here to view the SQL queries used to create the database schema
+1. Clone this project.
+2. In the [directory for the front-end](https://github.com/nabzali/WebScraper_App/tree/main/WebScraper-FrontEnd), run `npm install` followed by `ng serve`.
+3. In the [directory for the back-end](https://github.com/nabzali/WebScraper_App/tree/main/WebScraper-BackEnd/WebScraper-BackEnd), run `dotnet run`.
+- The connection string is stored in the [appsettings.json](https://github.com/nabzali/WebScraper_App/blob/main/WebScraper-BackEnd/WebScraper-BackEnd/appsettings.json) file in the back-end
+- And if needed, see the [SQL queries used to create the database schema](https://github.com/nabzali/WebScraper_App/blob/main/WebScraper-BackEnd/WebScraper-BackEnd/SQL%20Scripts/InsertData.sql)
 
 ## Design/Architecture Choices
 
