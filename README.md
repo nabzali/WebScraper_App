@@ -19,7 +19,7 @@ To view these, kindly see [WebScraper_App
 
 For this project I chose to create an Angular app to go along with the ASP.NET Web API, featuring an MSSQL Express instance to store search history data.
 
-**Front End**
+**Front End (Angular)**
 
 URL: `https://localhost:4200/`
 The Angular front-end consists of two views nested inside the root component. Navigate between them using the two tabs at the top of the UI.
@@ -32,7 +32,7 @@ Two models were also created to represent data.
 - A **searchRequestModel**
 - A **searchResponseModel**
 
-**Back-End**
+**Back-End (ASP.NET Web API)**
 
 Base URL: `https://localhost:44380/`
 A controller method to deal with API requests features methods for two endpoints, corresponding to the request from the Search component (POST request) and the history component (GET request).
