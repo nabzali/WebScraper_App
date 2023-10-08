@@ -61,16 +61,7 @@ namespace WebScraper_BackEnd.Services
 
             webClient.Headers.Add("Accept", "text/html");
 
-            var htmlContent = "";
-            try
-            {
-                htmlContent = await Task.Run(() => webClient.DownloadString($"https://www.google.com/search?num={resultLimit}&q={searchTerms}"));
-            }
-            catch (Exception ex)
-            {
-                // Throw 500 response, error trying to download search data
-            }
-            
+            var htmlContent = await Task.Run(() => webClient.DownloadString($"https://www.google.com/search?num={resultLimit}&q={searchTerms}"));
 
             // Regex pattern to find webpage links
             string pattern = @"href\s*=\s*(?:[""'](?<1>\/url\?q=https:[^""']*)[""']|(?<1>\/url\?q=https:\S+))";
