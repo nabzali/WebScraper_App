@@ -22,6 +22,8 @@ export class SearchComponent implements OnInit{
   
   ngOnInit(): void {}
 
+  // When 'Run' is clicked, send the request and show the loading spinner.
+  // Once the response arrives, display the response details.
   onClickRun() {
     this.searchComplete = false;
     this.loadingText = "Processing search. Please wait..."
