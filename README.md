@@ -2,11 +2,11 @@
 
 ## Description
 
-This project is a web scraping application that allows users to search for information using a web interface built with Angular. The project specification can be found [here](link).
+The spec for the project can be found [here](link).
 
-Angular was used for building a front-end, communicating with my ASP.NET Web API back-end.
+I created an Angular app to go along with the ASP.NET Web API.
 
-There are two views (components) in the UI that can be navigated to using the tabs at the top.
+The Angular front-end contains two views (components).
 
 1. **Search View**: Allows users to perform searches and retrieve search results.
 2. **History View**: Allows users to view search history data.
@@ -27,9 +27,6 @@ GET /api/history
 ```http
 POST /api/search
 ```
-
-[Add any additional information about your API endpoints here.]
-
 ## Database Layer
 
 ## Instructions
