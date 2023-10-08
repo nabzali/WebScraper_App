@@ -8,7 +8,7 @@ For this project I chose to create an Angular app to go along with the ASP.NET W
 
 I compiled a gallery of screenshots to show things like the application running in Google Chrome. 
 To view these, kindly see [WebScraper_App
-/Screenshots](https://github.com/nabzali/WebScraper_App/tree/main/Screenshots) to see this.
+/Screenshots](https://github.com/nabzali/WebScraper_App/tree/main/Screenshots).
 
 The Angular front-end contains two views nested inside the root component. Navigate between them using the two tabs at the top of the UI.
 
