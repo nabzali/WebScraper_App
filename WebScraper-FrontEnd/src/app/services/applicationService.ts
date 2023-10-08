@@ -26,7 +26,14 @@ export class ApplicationService {
     }
 
     getSearchHistory(): Observable<searchResponse[]>{
-       return this.http.get<searchResponse[]>("https://localhost:44380/api/history"); 
+       return this.http.get<searchResponse[]>("https://localhost:44380/api/history")
+            .pipe(
+                catchError((error: any) => {
+                    // Handling error
+                    console.error('Error occurred:', error);
+                    throw error;
+                })
+            );
     }
 
 }

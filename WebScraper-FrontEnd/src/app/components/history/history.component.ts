@@ -11,11 +11,15 @@ export class HistoryComponent implements OnInit{
 
   constructor(private applicationService: ApplicationService){}
 
-  searchResults : searchResponse[] = []
+  searchHistoryData : searchResponse[] = []
+  dataLoaded = false;
+  
+
   ngOnInit(): void {
     this.applicationService.getSearchHistory().subscribe((response) => {
-      this.searchResults = response;
-      console.log(this.searchResults);
+      this.searchHistoryData = response;
+      console.log(this.searchHistoryData);
+      this.dataLoaded = true;
     });
     
   }
