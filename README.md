@@ -34,7 +34,11 @@ Two models were also created to represent data.
 
 **Back-End (ASP.NET Web API)**
 
-A controller method to deal with API requests features methods for two endpoints, corresponding to the request from the Search component (POST request) and the history component (GET request).
+Created in ASP.NET core 6.
+
+I broke up the project into a series of folders to roughly resemble an N Tier architecture.
+
+Features a controller to deal with API requests features methods for two endpoints, corresponding to the request from the Search component (POST request) and the history component (GET request).
 
 **Get search history to populate history data table**
 ```http
