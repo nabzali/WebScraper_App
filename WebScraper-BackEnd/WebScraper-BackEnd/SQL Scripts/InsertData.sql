@@ -2,7 +2,7 @@
 CREATE DATABASE SearchesDB
 
 
--- I ran 'Add-Migration AddTable' and 'Update-Database' in Package Manager Console to generate my table,
+-- I ran 'Add-Migration AddTable' and 'Update-Database' in Package Manager Console to generate my table (part of EF Core)
 -- But here is the SQL to create the table
 CREATE TABLE Searches (
     Id INT IDENTITY(1,1) PRIMARY KEY,
