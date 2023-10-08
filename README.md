@@ -4,10 +4,12 @@
 
 This project is a web scraping application that allows users to search for information using a web interface built with Angular. The project specification can be found [here](link).
 
-As part of this project, I used Angular to build a reactive front-end app, which makes search requests to the ASP.NET Web API. The application has two main "views" (components) that can be navigated using the two tabs at the top:
+Angular was used for building a front-end, communicating with my ASP.NET Web API back-end.
 
-1. **Search View**: This view allows users to perform searches and retrieve search results.
-2. **History View**: In this view, users can access their search history.
+There are two views (components) in the UI that can be navigated to using the tabs at the top.
+
+1. **Search View**: Allows users to perform searches and retrieve search results.
+2. **History View**: Allows users to view search history data.
 
 ## Design/Architecture Choices
 
@@ -17,13 +19,19 @@ As part of this project, I used Angular to build a reactive front-end app, which
 
 The ASP.NET Web API provides two endpoints for interacting with the application:
 
+Base URL for the API: `https://localhost:44380/`
+
 1. **Search Endpoint (POST)**:
-   - Endpoint URL: `https://localhost:44380/api/search`
-   - Description: This endpoint is used to submit search requests and retrieve search results.
+   ```http
+	POST /api/search
+	```
+   - Description: Gets the search history as a list of search objects, populates table on history view
 
 2. **History Endpoint (GET)**:
-   - Endpoint URL: `https://localhost:44380/api/history`
-   - Description: This endpoint allows users to retrieve their search history.
+   ```http
+	GET /api/history
+	```
+	- Description: Performs the search, returns the data, and also stores the data in the database.
 
 [Add any additional information about your API endpoints here.]
 
