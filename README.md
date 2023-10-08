@@ -17,15 +17,13 @@ There are two views (components) in the UI that can be navigated to using the ta
 
 ## API Endpoints
 
-I implemented 2 endpoints in the controller:
+Base URL: `https://localhost:44380/`
 
-Base URL for the API: `https://localhost:44380/`
-
-**Get search history**
+**Get search history to populate history data table**
 ```http
 GET /api/history
 ```
-**Perform search**
+**Perform search to get search result and store the data**
 ```http
 POST /api/search
 ```
