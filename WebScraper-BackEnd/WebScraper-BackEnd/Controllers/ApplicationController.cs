@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using WebScraper_BackEnd.Models;
+using WebScraper_BackEnd.ViewModels;
 using WebScraper_BackEnd.Services;
 
 namespace WebScraper_BackEnd.Controllers
@@ -17,14 +17,14 @@ namespace WebScraper_BackEnd.Controllers
         // POST
         [Route("search")]
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] SearchRequestModel requestModel)
+        public async Task<IActionResult> Post([FromBody] SearchRequestViewModel requestModel)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            SearchResponseModel searchResult;
+            SearchResponseViewModel searchResult;
 
             try
             {
@@ -44,7 +44,7 @@ namespace WebScraper_BackEnd.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            IEnumerable<SearchResponseModel> searchHistory;
+            IEnumerable<SearchResponseViewModel> searchHistory;
             try
             {
                 searchHistory = await _applicationService.GetSearchHistory();

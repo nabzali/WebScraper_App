@@ -6,12 +6,11 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit{
 
-  // Initialising the inputs
+  // Initialised variables
   loadingText: string = ""
   url: string = "";
   searchTerms: string = "";
@@ -19,17 +18,9 @@ export class SearchComponent implements OnInit{
   searchComplete: boolean = false;
   
   
-  constructor(private applicationService: ApplicationService){
-    this.getValues();
-  }
-  ngOnInit(): void {
-    
-  }
-
-  getValues(){
-    console.log(this.url);
-    console.log(this.searchTerms);
-  }
+  constructor(private applicationService: ApplicationService){}
+  
+  ngOnInit(): void {}
 
   onClickRun() {
     this.searchComplete = false;

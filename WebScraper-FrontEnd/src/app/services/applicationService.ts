@@ -11,9 +11,9 @@ export class ApplicationService {
 
     private baseUrl = "https://localhost:44380/";
 
-    constructor(private http: HttpClient) {
-    }
+    constructor(private http: HttpClient) {}
 
+    // HTTP POST request to perform search
     createSearchRequest(searchRequest: searchRequest) : Observable<searchResponse>{
         return this.http.post<searchResponse>(this.baseUrl + "api/search", searchRequest)
             .pipe(
@@ -25,8 +25,9 @@ export class ApplicationService {
             );
     }
 
+    // HTTP GET request to retrieve search history data
     getSearchHistory(): Observable<searchResponse[]>{
-       return this.http.get<searchResponse[]>("https://localhost:44380/api/history")
+       return this.http.get<searchResponse[]>(this.baseUrl + "api/history")
             .pipe(
                 catchError((error: any) => {
                     // Handling error

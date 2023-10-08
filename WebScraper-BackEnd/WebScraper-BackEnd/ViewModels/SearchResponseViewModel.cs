@@ -1,6 +1,6 @@
-﻿namespace WebScraper_BackEnd.Models
+﻿namespace WebScraper_BackEnd.ViewModels
 {
-    public class SearchResponseModel
+    public class SearchResponseViewModel
     {
         public int Id { get; set; }
         public string SearchTerms { get; set; }

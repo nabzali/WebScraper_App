@@ -1,5 +1,8 @@
-<div class="container">    
+<div class="container">
+  <!-- Heading -->   
   <h2 class="heading">Your Search Results</h2>
+
+  <!-- Loading Spinner shown when data has not loaded-->
   <div *ngIf="!dataLoaded">
     <div class="text-center">
       <div class="spinner-border" role="status">
@@ -7,6 +10,7 @@
       </div>
     </div>
   </div>
+  <!-- Table data shown when data has loaded-->
   <table *ngIf="dataLoaded" class="table">
     <thead>
       <tr>

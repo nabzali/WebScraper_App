@@ -1,5 +1,8 @@
 <div class="container">
+    <!-- Heading -->
     <h2 class="heading">Search Results URL Counter</h2>   
+
+    <!-- URL input -->
     <div class="mb-3">
         <label for="basic-url" class="form-label">URL to find:</label>
         <div class="input-group">
@@ -8,11 +11,14 @@
         </div>
         <div class="form-text" id="basic-addon4">e.g. https://www.infotrack.co.uk</div>
     </div>
+
+    <!-- Search Terms Input -->
     <div class="mb-3">
         <label for="formGroupExampleInput" class="form-label">Search Input:</label>
         <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Search Terms" [(ngModel)]="searchTerms">
         <div class="form-text" id="basic-addon4">e.g. land registry search</div>
     </div>
+
     <!-- <div class="mb-3">
         <label for="formGroupExampleInput2" class="form-label">Search Engine:</label>
         <select class="form-select" aria-label="Default select example" [(ngModel)]="searchEngine">
@@ -21,12 +27,14 @@
             <option value="Bing">Bing</option>
         </select>
     </div> -->
+
+    <!-- Button to run the search -->
     <div class="mb-3">
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#resultModal" (click)="onClickRun()"><b>Run</b></button>
     </div>
 </div>
   
-  <!-- Modal -->
+  <!-- Modal - appears when result is getting processed -->
 <div class="modal fade" id="resultModal" tabindex="-1" aria-labelledby="resultModalLabel" aria-hidden="true">
 <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -35,9 +43,11 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
+        <!-- Show spinner when result is loading -->
         <div *ngIf="!searchComplete" class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
+        <!-- Display result information when result has loaded -->
         <p *ngIf="searchComplete">{{resultText}}</p>
     </div>
     <div class="modal-footer">

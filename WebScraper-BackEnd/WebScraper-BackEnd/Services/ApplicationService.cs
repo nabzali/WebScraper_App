@@ -5,8 +5,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using TakeHomeAssessment_BindySt.DbContexts;
 using WebScraper_BackEnd.Entities;
-using WebScraper_BackEnd.Models;
-using static System.Net.WebRequestMethods;
+using WebScraper_BackEnd.ViewModels;
 
 namespace WebScraper_BackEnd.Services
 {
@@ -22,20 +21,20 @@ namespace WebScraper_BackEnd.Services
             _context = context;
         }
 
-        public async Task<IEnumerable<SearchResponseModel>> GetSearchHistory()
+        public async Task<IEnumerable<SearchResponseViewModel>> GetSearchHistory()
         {
             var searchHistory = await _context.Searches
-                .ProjectTo<SearchResponseModel>(_mapper.ConfigurationProvider)
+                .ProjectTo<SearchResponseViewModel>(_mapper.ConfigurationProvider)
                 .ToListAsync();
 
             return searchHistory;
         }
 
-        public async Task<SearchResponseModel> CreateSearchRequest(SearchRequestModel requestModel)
+        public async Task<SearchResponseViewModel> CreateSearchRequest(SearchRequestViewModel requestModel)
         {
             var occurrences = await this.Search(requestModel.Url, requestModel.SearchTerms);
 
-            var resultModel = new SearchResponseModel()
+            var resultModel = new SearchResponseViewModel()
             {
                 SearchTerms = requestModel.SearchTerms,
                 Occurrences = occurrences,
@@ -45,9 +44,6 @@ namespace WebScraper_BackEnd.Services
 
             var resultEntity = _mapper.Map<SearchEntity>(resultModel);
 
-
-            //Update Database
-            //Try block
             _context.Add(resultEntity);
 
             await _context.SaveChangesAsync();
@@ -61,10 +57,8 @@ namespace WebScraper_BackEnd.Services
 
             WebClient webClient = new WebClient();
 
-            // Set the WebClient object's Headers property to a new WebHeaderCollection object.
             webClient.Headers = new WebHeaderCollection();
 
-            // Add the following header to the WebHeaderCollection object:
             webClient.Headers.Add("Accept", "text/html");
 
             var htmlContent = "";
@@ -81,24 +75,29 @@ namespace WebScraper_BackEnd.Services
             // Regex pattern to find webpage links
             string pattern = @"href\s*=\s*(?:[""'](?<1>\/url\?q=https:[^""']*)[""']|(?<1>\/url\?q=https:\S+))";
          
+            // Store matches
             MatchCollection matches = Regex.Matches(htmlContent, pattern);
 
-            var positions = new List<int>();
+            // Declare empty list of occurrences
+            var occurrences = new List<int>();
 
+            // Go through each match, incrementing the position number each time
             int currentPosition = 1;
             foreach (Match match in matches)
             {
                 string val = match.Groups[1].Value;
+
+                // If the match contains the URL we are looking for, add its position to the occurrences list
                 if (val.Contains($"{Url}"))
                 {
-                    positions.Add(currentPosition);
+                    occurrences.Add(currentPosition);
                 }
 
                 currentPosition++;
 
             }
 
-            return positions;
+            return occurrences;
         }
 
     }

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Text.Json;
 using WebScraper_BackEnd.Entities;
-using WebScraper_BackEnd.Models;
+using WebScraper_BackEnd.ViewModels;
 
 namespace WebScraper_BackEnd.Profiles
 {
@@ -10,9 +10,9 @@ namespace WebScraper_BackEnd.Profiles
     {
         public MappingProfile() 
         {
-            CreateMap<SearchResponseModel, SearchEntity>()
+            CreateMap<SearchResponseViewModel, SearchEntity>()
                 .ForMember(dest => dest.Occurrences, opt => opt.MapFrom(src => IntListToJson(src.Occurrences)));
-            CreateMap<SearchEntity, SearchResponseModel>()
+            CreateMap<SearchEntity, SearchResponseViewModel>()
                 .ForMember(dest => dest.Occurrences, opt => opt.MapFrom(src => JsonToIntList(src.Occurrences)));
         }
 

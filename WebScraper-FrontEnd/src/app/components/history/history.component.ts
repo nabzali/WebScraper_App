@@ -4,21 +4,20 @@ import { ApplicationService } from 'src/app/services/applicationService';
 
 @Component({
   selector: 'app-history',
-  templateUrl: './history.component.html',
-  styleUrls: ['./history.component.css']
+  templateUrl: './history.component.html'
 })
 export class HistoryComponent implements OnInit{
-
-  constructor(private applicationService: ApplicationService){}
-
+  
+  // Initialised variables
   searchHistoryData : searchResponse[] = []
   dataLoaded = false;
-  
 
+  constructor(private applicationService: ApplicationService){}
+  
+  // Populate and show table when search data has been retrieved
   ngOnInit(): void {
     this.applicationService.getSearchHistory().subscribe((response) => {
       this.searchHistoryData = response;
-      console.log(this.searchHistoryData);
       this.dataLoaded = true;
     });
     
