@@ -29,8 +29,8 @@ The Angular front-end consists of two views nested inside the root component. Na
 An instance of [applicationService.ts](https://github.com/nabzali/WebScraper_App/blob/main/WebScraper-FrontEnd/src/app/services/applicationService.ts) is injected into each component to perform the relevant API requests.
 
 Two models were also created to represent data. 
-- A `searchRequestModel`
-- A `searchResponseModel`
+- A **searchRequestModel**
+- A **searchResponseModel**
 
 **Back-End**
 
@@ -49,9 +49,9 @@ POST /api/search
 An instance of [ApplicationService.cs](https://github.com/nabzali/WebScraper_App/blob/main/WebScraper-BackEnd/WebScraper-BackEnd/Services/ApplicationService.cs) is injected into the controller to perform the domain functionality (database transactions and performing the search).
 
 Two 'ViewModels' were created to represent the data, corresponding to the ones in the front-end:
-- A `SearchRequestViewModel`
-- A `SearchResponseViewModel`
+- A **SearchRequestViewModel**
+- A **SearchResponseViewModel**
 
-But these would be mapped to a `SearchEntity` which stores the result of a search in the database.
+But these would be mapped to a **SearchEntity** which stores the result of a search in the database.
 Entity Framework Core and Migrations were used to sync my Entity with the database.
 
