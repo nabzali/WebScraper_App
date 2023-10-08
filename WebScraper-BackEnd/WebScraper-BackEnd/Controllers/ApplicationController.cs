@@ -44,7 +44,16 @@ namespace WebScraper_BackEnd.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var searchHistory = await _applicationService.GetSearchHistory();
+            IEnumerable<SearchResponseModel> searchHistory;
+            try
+            {
+                searchHistory = await _applicationService.GetSearchHistory();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, $"An error occurred when trying to requesst search history data. Details: {e}");
+            }
+
             return Ok(searchHistory);
         }
 
