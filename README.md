@@ -21,15 +21,17 @@ The ASP.NET Web API provides two endpoints for interacting with the application:
 
 Base URL for the API: `https://localhost:44380/`
 
-1. **Search Endpoint (POST)**:
-   ```http
-   POST /api/search
-   ```
+## User Schema Endpoints
+### `/api/users` 
 
-2. **History Endpoint (GET)**:
-   ```http
-   GET /api/history
-   ```
+**Get all users**
+```http
+GET /api/users
+```
+**Get user by ID**
+```http
+GET /api/users/{id}
+```
 
 [Add any additional information about your API endpoints here.]
 
