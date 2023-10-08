@@ -23,15 +23,13 @@ Base URL for the API: `https://localhost:44380/`
 
 1. **Search Endpoint (POST)**:
    ```http
-	POST /api/search
-	```
-   - Description: Gets the search history as a list of search objects, populates table on history view
+   POST /api/search
+   ```
 
 2. **History Endpoint (GET)**:
    ```http
-	GET /api/history
-	```
-	- Description: Performs the search, returns the data, and also stores the data in the database.
+   GET /api/history
+   ```
 
 [Add any additional information about your API endpoints here.]
 
