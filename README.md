@@ -10,8 +10,9 @@ To view these, kindly see [WebScraper_App
 
 ## Instructions
 1. Clone this project.
-2. In the [directory for the front-end](https://github.com/nabzali/WebScraper_App/tree/main/WebScraper-FrontEnd), run `npm install` followed by `ng serve`.
+2. In the [directory for the front-end](https://github.com/nabzali/WebScraper_App/tree/main/WebScraper-FrontEnd), run `npm install` followed by `ng serve`. 
 3. In the [directory for the back-end](https://github.com/nabzali/WebScraper_App/tree/main/WebScraper-BackEnd/WebScraper-BackEnd), run `dotnet run`.
+- The Angular app should spin up on `http://localhost:4200`, whilst the Web API should be hosted on `https://localhost:7033`
 - The connection string is stored in the [appsettings.json](https://github.com/nabzali/WebScraper_App/blob/main/WebScraper-BackEnd/WebScraper-BackEnd/appsettings.json) file in the back-end
 - And if needed, see the [SQL queries used to create the database schema](https://github.com/nabzali/WebScraper_App/blob/main/WebScraper-BackEnd/WebScraper-BackEnd/SQL%20Scripts/InsertData.sql)
 
@@ -21,7 +22,7 @@ For this project I chose to create an Angular app to go along with the ASP.NET W
 
 **Front End (Angular)**
 
-URL: `https://localhost:4200/`
+URL: `http://localhost:4200/`
 The Angular front-end consists of two views nested inside the root component. Navigate between them using the two tabs at the top of the UI.
 1. **Search View**: Allows users to perform searches and retrieve search results.
 2. **History View**: Allows users to view search history data.
@@ -34,7 +35,7 @@ Two models were also created to represent data.
 
 **Back-End (ASP.NET Web API)**
 
-Base URL: `https://localhost:44380/`
+Base URL: `https://localhost:7033/`
 A controller method to deal with API requests features methods for two endpoints, corresponding to the request from the Search component (POST request) and the history component (GET request).
 
 **Get search history to populate history data table**
