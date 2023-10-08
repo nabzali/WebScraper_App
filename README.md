@@ -2,7 +2,7 @@
 
 ## Description
 
-The spec for the project can be found [here](https://github.com/nabzali/WebScraper_App/blob/main/infotrack_task.pdf).
+The spec for the project can be found here: [WebScraper_App/infotrack_task.pdf(https://github.com/nabzali/WebScraper_App/blob/main/infotrack_task.pdf).
 
 I created an Angular app to go along with the ASP.NET Web API. The Angular front-end contains two views (components).
 
