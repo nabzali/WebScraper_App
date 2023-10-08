@@ -1,10 +1,14 @@
 # Search Results WebScraper Project
 
-## Description
+## Intro
 
-The spec for the project can be found here: [WebScraper_App/infotrack_task.pdf](https://github.com/nabzali/WebScraper_App/blob/main/infotrack_task.pdf).
+The spec for the project can be found here: [WebScraper_App/infotrack_task.pdf](https://github.com/nabzali/WebScraper_App/blob/main/infotrack_task.pdf)
 
-I created an Angular app to go along with the ASP.NET Web API. The Angular front-end contains two views (components).
+For this project I chose to create an Angular app to go along with the ASP.NET Web API. 
+
+I compiled a gallery of screenshots to show things like the application running in Google Chrome. Kindly click here [here](https://github.com/nabzali/WebScraper_App/tree/main/Screenshots) to see this.
+
+The Angular front-end contains two views (components).
 
 1. **Search View**: Allows users to perform searches and retrieve search results.
 2. **History View**: Allows users to view search history data.
